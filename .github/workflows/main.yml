@@ -26,6 +26,6 @@ jobs:
     - name: Create the Package
       run: dotnet pack --configuration Release
 
-        - name: Publish
+    - name: Publish
       run: dotnet nuget push "MoneyConversion/bin/Release/*.nupkg" -k ${{ secrets.MONEY_NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
 
